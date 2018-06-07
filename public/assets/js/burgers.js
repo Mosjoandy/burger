@@ -11,13 +11,13 @@ $(function() {
       };
   
       // Send the PUT request.
-      $.ajax("/api/burgers" + id, {
+      $.ajax("/api/burgers/" + id, {
         type: "PUT",
         data: newDevouredState
       }).then(
         function() {
-          console.log("Is this burger devoured: ", newSleep);
-          // Reload the page to get the updated list
+          console.log("Is this burger devoured: ", newDevoured);
+          // Reload the page to get the updated listn
           location.reload();
         }
       );
@@ -29,11 +29,11 @@ $(function() {
   
       var newBurger = {
         name: $("#ca").val().trim(),
-        devoured: $("[name=devoured]:checked").val().trim()
+        devoured: false
       };
   
       // Send the POST request.
-      $.ajax("/api/burgers", {
+      $.ajax("/api/burgers/", {
         type: "POST",
         data: newBurger
       }).then(
@@ -45,19 +45,19 @@ $(function() {
       );
     });
   
-    $(".delete-burger").on("click", function(event) {
-      var id = $(this).data("id");
+    // $(".delete-burger").on("click", function(event) {
+    //   var id = $(this).data("id");
   
-      // Send the DELETE request.
-      $.ajax("/api/burgers" + id, {
-        type: "DELETE"
-      }).then(
-        function() {
-          console.log("Delete devoured burger: " , id);
-          // Reload the page to get the updated list
-          location.reload();
-        }
-      );
-    });
+    //   // Send the DELETE request.
+    //   $.ajax("/api/burgers" + id, {
+    //     type: "DELETE"
+    //   }).then(
+    //     function() {
+    //       console.log("Delete devoured burger: " , id);
+    //       // Reload the page to get the updated list
+    //       location.reload();
+    //     }
+    //   );
+    // });
   });
   
