@@ -1,6 +1,6 @@
 var mysql = require("mysql");
 
-var connection = mysql.conection({
+var connection = mysql.createConnection({
     host: "localhost",
     port: 3006,
     user: "root",
@@ -10,7 +10,7 @@ var connection = mysql.conection({
 
 connection.connect(function(err) {
     if (err) {
-        console.log("Your hamsters have escaped! Error: " + err.stack);
+        console.log("Your hamsters have escaped! " + err.stack);
         return;
     }
     console.log("You have sufficient hamsters! Connected as " + connection.threadId);
