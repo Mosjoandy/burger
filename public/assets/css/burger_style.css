@@ -1,0 +1,12 @@
+body {
+    background-image: url("../img/food.png");
+    background-repeat: repeat-x;
+}
+
+container {
+    border: solid 1px black;
+}
+
+li {
+    list-style-type: none;
+}
