@@ -1,12 +1,13 @@
 body {
     background-image: url("../img/food.png");
-    background-repeat: repeat-x;
-}
-
-container {
-    border: solid 1px black;
+    background-repeat: repeat;
 }
 
 li {
     list-style-type: none;
+}
+
+.jumbotron {
+    background-image: url("../img/burgers.jpg");
+    color: white;
 }
