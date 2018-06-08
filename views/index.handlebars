@@ -3,21 +3,21 @@
 <h2>Burgers Available</h2>
 
 <ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-     {{> burgers/burgers-block devoured=true}}
-    {{/unless}}
-  {{/each}}
+    {{#each burgers}}
+        {{#unless devoured}}
+            {{> burgers/burgers-block devoured=true}}
+        {{/unless}}
+    {{/each}}
 </ul>
 
 <h2>Burgers Consumed</h2>
 
 <ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burgers-block devoured=false}}
-    {{/unless}} 
-  {{/each}}
+    {{#each burgers}}
+        {{#if devoured}}
+            {{> burgers/burgers-block devoured=false}}
+        {{/if}} 
+    {{/each}}
 </ul>
 
 <h2>Add a burger</h2>

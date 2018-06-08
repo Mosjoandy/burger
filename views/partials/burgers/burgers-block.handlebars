@@ -1,9 +1,12 @@
 <li>
 	{{name}}
 
-	<button class="change-devoured" data-id="{{id}}" data-newDevoured="{{devoured}}">
-		{{#if devoured}}CHOW DOWN{{else}}DEVOURED!{{/if}}
-	</button>
-
-	<!-- <button class="delete-burger" data-id="{{this.id}}">DELETE!</button> -->
+	{{#if devoured}}
+	<!-- data-id {{id}} is coming from the ID of the burger, {{devoured}} is the supposed boolean of 0 or 1 -->
+	<button class="change-devoured" data-id="{{id}}" data-newDevoured="{{devoured}}">CHOW DOWN</button>
+	
+		{{else}}
+	
+	<button class="delete-burger" data-id="{{this.id}}">KILL</button>
+	{{/if}}
 </li>
